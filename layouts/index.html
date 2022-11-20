@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/layouts/css/styles.css" />
+		<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+		<title>Tailwind</title>
+	</head>
+	<body class="antialiased">
+		<header
+			class="bg-blue-400 h-20 relative lg:flex lg:items-start"
+			x-data="{open:false}"
+			@click.outside="open = false"
+		>
+			<div class="flex items-center lg:relative lg:order-2 py-2 px-4 lg:flex-grow">
+				<ion-icon
+					class="text-3xl focus:bg-cyan-300 hover:bg-cyan-300 rounded-lg p-2 cursor-pointer lg:hidden"
+					name="menu"
+					@click="open=true"
+				></ion-icon>
+				<a class="inline-block py-2 px-6 text-2xl" href="">AlpineJS</a>
+			</div>
+			<nav
+				class="absolute duration-300 lg:relative lg:order-1 z-10 text-white bg-teal-500 h-screen w-80 inset-0 transform py-2 px-4 lg:translate-x-0 lg:opacity-100"
+				:class="{'-translate-x-0 ease-in opacity-100':open===true,'-translate-x-full ease-in-out opacity-0':open===false}"
+			>
+				<div class="flex justify-between items-center">
+					<span class="text-2xl text-white font-bold">Sidebar</span>
+
+					<ion-icon
+						class="text-2xl focus:bg-cyan-300 hover:bg-cyan-300 rounded-lg p-2 cursor-pointer lg:hidden"
+						name="chevron-back"
+						@click="open=false"
+					></ion-icon>
+				</div>
+				<ul class="mt-8">
+					<li>
+						<a
+							class="block text-lg focus:bg-cyan-300 hover:bg-cyan-300 rounded-md py-2 px-4"
+							href=""
+							>Home</a
+						>
+						<a
+							class="block text-lg focus:bg-cyan-300 hover:bg-cyan-300 rounded-md py-2 px-4"
+							href=""
+							>About</a
+						>
+						<a
+							class="block text-lg focus:bg-cyan-300 hover:bg-cyan-300 rounded-md py-2 px-4"
+							href=""
+							>Services</a
+						>
+						<a
+							class="block text-lg focus:bg-cyan-300 hover:bg-cyan-300 rounded-md py-2 px-4"
+							href=""
+							>Contact Us</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+	</body>
+</html>
