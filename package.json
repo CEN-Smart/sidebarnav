@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"dev": "npx tailwindcss -i tailwind.css -o ./layouts/styles.css --watch",
-		"prod": "npx tailwindcss -i tailwind.css -o ./layouts/styles.css --minify"
+		"dev": "npx tailwindcss -i tailwind.css -o styles.css --watch",
+		"prod": "npx tailwindcss -i tailwind.css -o styles.css --minify"
 	},
 	"keywords": [],
 	"author": "",
